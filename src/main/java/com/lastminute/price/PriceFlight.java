@@ -43,5 +43,4 @@ public class PriceFlight {
         return bigdecimal != null && bigdecimal.signum() != -1;
     }
 
-
 }

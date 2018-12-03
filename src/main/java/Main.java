@@ -22,6 +22,10 @@ public class Main {
         List<Flight> myFlights = new FlightList().fromCSVtoFlightList(FLIGHT_PRICES_FILENAME,
                 FLIGHT_ROUTES_FILENAME, CODE_INDEX_PRICES, CODE_INDEX_ROUTES);
 
+        List<List<Flight>> result =  SearchFlight.oneStopOverSearch(myFlights, "AMS", "FRA");
+
+        System.exit(1);
+
         // Examples from the spec
         tinyDemoWrapper(myFlights, "AMS", "FRA", BigDecimal.valueOf(31), BigDecimal.valueOf(1));
         tinyDemoWrapper(myFlights, "LHR", "IST", BigDecimal.valueOf(15), BigDecimal.valueOf(3));
